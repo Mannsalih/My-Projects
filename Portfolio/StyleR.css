@@ -1,0 +1,271 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+/* Style for navbar */
+.navbar {
+    display: flex;
+    justify-content: center; 
+    background-color: #9d9d9dcb; /* Gray background for navbar */
+    padding: 15px 0; 
+    position: fixed; 
+    top: 0;
+    width: 100%;
+    z-index: 10; 
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none; 
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin: 0 10px; 
+    transition: background-color 0.5s ease, border-color 0.5s ease; 
+   
+    border: 2px solid white; 
+    border-radius: 5px;
+}
+
+/* Hover effect*/
+.navbar a:hover {
+    background-color: white; 
+    color: rgb(0, 0, 0);
+    border-color: white; 
+}
+
+/* About Section */
+.about {
+    padding: 100px 40px;
+    text-align: left; 
+    background-image: url('Palm.JPG'); 
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    position: relative; 
+    margin-top: 70px; 
+    height: 100vh; /* Ensure the section takes the full viewport height */
+}
+/* Hover effect for the "About Me" paragraph */
+.about-paragraph:hover {
+    color: #ffffff; /* Change text color on hover */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+/* Center the "About Me" box */
+.about-box {
+    display: block; /* Change from inline-block to block */
+    margin: 0 auto; /* Center the box horizontally */
+    text-align: center; /* Center the text inside the box */
+    padding: 12px 25px;
+    background-color: transparent;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    border: 2px solid white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+/* Change "My Experience" and "Skills" headings to white */
+.about h2 {
+    color: white;
+}
+
+/* Change text color inside experience and skills boxes to white */
+.experience-box p, .skills-box p {
+    color: white;
+}
+
+.about-box p {
+    margin: 0; 
+    text-align: center; 
+}
+/* Experience and Skills Boxes */
+.experience-boxes, .skills-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between boxes */
+    margin-top: 20px;
+}
+
+.experience-box, .skills-box {
+    flex: 1 1 calc(33.333% - 40px); /* Three boxes per row with spacing */
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    padding: 20px;
+    border: 2px solid white;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.experience-box:hover, .skills-box:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    background-color: rgba(255, 255, 255, 1); /* Fully white on hover */
+}
+
+.experience-box p, .skills-box p {
+    margin: 0;
+    font-size: 16px;
+    color: #242424;
+}
+/* Hover effect for paragraphs in experience and skills boxes */
+.experience-box p:hover, .skills-box p:hover {
+    color: #1b712d; /* Change text color on hover */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: color 0.3s ease; /* Smooth transition */
+}
+/* Hero Section Styling */
+.hero {
+    height: 100vh; 
+    background-image: url('Palm.JPG'); 
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white; }
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); 
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+/* Transparent button with a white border */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: transparent; 
+    color: white; 
+    font-size: 18px;
+    text-decoration: none;
+    border: 2px solid white; 
+    border-radius: 5px; 
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect for button */
+.btn:hover {
+    background-color: white; 
+    color: rgb(0, 0, 0); 
+    border-color: white; 
+}
+
+/* Responsive Styling */
+@media(max-width: 768px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .btn {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}
+
+/* Styling for certificates */
+.certificate-images {
+    display: flex;
+    justify-content: center; 
+    margin-top: 30px; 
+}
+
+.certificate-img {
+    width: 300px; 
+    height: auto; 
+    margin: 0 15px; 
+    border: 2px solid #ddd; 
+    border-radius: 5px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s; }
+
+.certificate-img:hover {
+    transform: scale(1.05); 
+}
+
+/* Spacing between the navbar and the content */
+.content {
+    margin-top: 100px; 
+    text-align: center; 
+}
+
+/* Footer Section */
+footer {
+    color: #242424;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: #9d9d9dcb; /* Match navbar background */
+}
+
+footer h2 {
+    margin-bottom: 20px;
+    color: white;
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between icons */
+    margin-bottom: 20px;
+}
+
+.contact-icons a {
+    color: white;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.contact-icons a:hover {
+    color: #1b712d; /* Highlight color on hover */
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+    color: white;
+}
+
+.social-media {
+    margin-top: 10px;
+}
+
+.social-media a {
+    color: #fff;
+    font-size: 1.2rem;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: #1b712d; /* Highlight color on hover */
+}
